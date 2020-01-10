@@ -1,0 +1,447 @@
+.body {
+    margin:0;
+    padding:0;
+    width:100%;
+    background-image:url("images/background-section-one.jpg");
+    background-size:100%;
+    background-repeat:no-repeat;
+    font-family:Montserrat,Verdana;
+}
+.container-section-one {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "header-section-one header-section-one header-section-one header-section-one header-section-one" 
+        "main-section-one main-section-one main-section-one main-section-one main-section-one" 
+        "footer-section-one footer-section-one footer-section-one footer-section-one footer-section-one";
+}
+.header-section-one {
+    grid-area: header-section-one;
+    margin: 5px 10px 0 10px;
+    display:flex;
+    justify-content:space-between;
+}
+    .header-section-one img {
+        width: 180px;
+        display: inline-flex;
+        justify-content: center;
+        align-self: center;
+        height: 100px;
+    }
+
+    .header-section-one ul {
+        display: inline-flex;
+        justify-content: center;
+        align-self: center;
+        
+    }
+
+
+    .header-section-one ul li {
+        
+        padding: 0 10px;
+        list-style: none;
+        font-family:Montserrat;
+        font-weight:bold;
+        font-size:1em;
+        
+        margin-right:20px;
+    }
+
+        .header-section-one ul li a {
+            color: black;
+            text-decoration: none;
+            transition: all .2s ease-in;
+        }
+        .header-section-one ul li.selected a {
+            color: white;
+            border-bottom: 5px solid yellow;
+            text-decoration-color: #EACD56;
+            padding-bottom:3px;
+            text-underline-position:below;
+        }
+
+        .header-section-one ul li a:hover {
+            color: #C38935;
+            border-bottom: 5px solid white;
+            padding-bottom: 3px;
+            transition: all .2s ease-in;
+        }
+
+       
+
+    /*END OF SECTION ONE HEADER*/
+
+
+.main-section-one {
+    grid-area: main-section-one;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+
+}
+.main-section-one img {
+    width:1100px;
+    height:auto;
+    padding-top:100px;
+    padding-left:150px;
+ 
+}
+
+.footer-section-one {
+    grid-area: footer-section-one;
+    justify-self: center;
+}
+
+    .footer-section-one a:hover {
+        color:white;
+    }
+
+/*END OF SECTION ONE MAIN*/
+@media screen and (max-width:916px) {
+    .main-section-one img {
+        align-content:center;
+        justify-content:center;
+        width:100%;
+    }
+
+}
+.container-section-two {
+    background-color:white;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow:row;
+    grid-template-areas:"imageSectionOne textSectionOne";
+    align-content:center;
+    justify-content:center;
+}
+
+.container-section-two  img image{
+    grid-area: imageSectionOne;
+}
+
+.container-section-two img text{
+        grid-area: textSectionTwo;
+}
+
+    .container-section-two img:first-child {
+        padding: 20px 0 20px 50px;
+        width: 100%;
+        height:auto;
+        display:inline-block;
+        
+    }
+
+    .container-section-two img:last-child {
+        margin-left: -300px;
+        margin-top: 200px;
+        width: 100%;
+        display: inline-block;
+        background-color: rgba(85,67,49,0.75);
+    }
+
+    .text {
+        padding:0 20px;
+        border-radius:2px;   
+
+    }
+
+/*END OF SECTION TWO */
+
+
+.container-section-three {
+    width: 100%;
+    background-color: #554331;
+    background: url("images/bgImageSectionThree.png");
+    background-color: rgba(85,67,49, 0.9);
+    background-size:1200px;
+    background-repeat:no-repeat;
+    background-position:center;
+    display: grid;
+    grid-template-areas: "textSectionThree" "magazineImage";
+}
+
+.forbesLogo {
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nytimesLogo {
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.rockLogo {
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.outdoorLogo {
+    width: auto;
+    height: 50px;
+    margin-right:10px;
+}
+.magazinesGroup {
+    grid-area:magazineImage;
+    justify-self:center;
+    align-content:center;
+    padding: 30px 0 50px 0;
+}
+
+.textSectionThree {
+    padding-top:20px;
+    grid-area: textSectionThree;
+    justify-self: center;
+    align-content: center;
+    font-size:2em;
+    font-weight:bold;
+    color:white;
+    text-transform:uppercase;
+}
+
+
+
+/*END OF SECTION THREE */
+
+.container-section-one-secton-four {
+    background: url("images/bgImageSectionFour.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-auto-flow: column;
+    grid-template-areas: "upside" "downside";
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 10px;
+}
+
+.upsideContainerSectionFour {
+    padding-top:10px;
+    justify-self:center;
+
+}
+
+.downsideContainerSectionFour {
+    grid-area: downside;
+    vertical-align: central;
+}
+
+.personOneClip {
+    clip-path: circle(40% at 50% 50%);
+    width:300px;
+    height:300px;
+}
+
+.personThreeClip {
+    clip-path: circle(40% at 50% 50%);
+    width: 300px;
+    height: 300px;
+}
+
+.personTwoClip {
+    clip-path: circle(40% at 50% 50%);
+    width: 300px;
+    height: 300px;
+}
+
+.performerImagerContainer {
+    display: flex;
+    filter: drop-shadow(8px 8px 10px gray);
+}
+
+.headingTextSectionFour {
+    padding-top:20px;
+    color: rgba(85,67,49,.7);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+    .headingTextSectionFour p {
+        width:500px;
+        border-bottom: 10px solid #EACD56;
+    }
+
+.performer-one {
+    padding-right: 10px;
+    color: rgb(85,67,49);
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.performer-two {
+    padding-right:10px;
+    color: rgb(85,67,49);
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.performer-three {
+    padding-right: 10px;
+    color: rgb(85,67,49);
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.personOneClip {
+    box-shadow: 0 3px 2px rgba(2, 3, 0, 0.8);
+}
+
+/*END OF SECTION FOUR */
+
+.container-section-five {
+    display: grid;
+    justify-content:center;
+    align-content:center;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "DownsideContainer UpsideContainer";
+}
+
+.UpsideContainerSectionFive {
+    grid-area: UpsideContainer;
+    justify-self:right;
+}
+
+.DownsideContainerSectionFive {
+    grid-area: DownsideContainer;
+    justify-self: center;
+}
+
+.imageContainer img{
+    margin-right:100px;
+    padding:50px;
+    width:900px;
+    height:500px;
+}
+
+.buttonContainer {
+    display:block;
+    text-align:center;
+    font-size:2.2em;
+    font-family:Montserrat;
+    font-weight:bold;
+    text-transform:uppercase;
+    justify-self:center;
+    margin:200px 0 0 0;
+    
+}
+
+.buttonOneSectionFive {
+    padding: 20px 50px;
+    background-color: #EACD56;
+    margin-bottom: 20px;
+    box-shadow: 15px 5px  #554331;
+}
+
+.buttonTwoSectionFive {
+    box-shadow: 15px 5px #554331;
+    padding: 20px 50px;
+    background-color: #EACD56;
+}
+.buttonOneSectionFive p {
+    margin-bottom:0;
+
+}
+.buttonTwoSectionFive p {
+    margin-bottom: 0;
+}
+
+.buttonOneSectionFive p a {
+    color: black;
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+    .buttonOneSectionFive p a:hover {
+        color: white;
+        transition: all .2s ease-in;
+    }
+.buttonTwoSectionFive p a {
+    color: black;
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+    .buttonTwoSectionFive p a:hover {
+        color: white;
+        transition: all .2s ease-in;
+    }
+
+/*END OF SECTION FIVE */
+
+.container-footer {
+    display: grid;
+    background: url("images/footerBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 100%;
+    grid-template-areas: "upper-footer" "down-footer";
+}
+
+.upperFooter {
+    grid-area: upper-footer;
+    display: flex;
+    justify-content: space-between;
+    padding:50px 80px;
+}
+
+
+
+.downFooter {
+    grid-area: down-footer;
+    align-content: center;
+    justify-content: center;
+    font-weight:bold;
+}
+
+.downFooter p{
+    text-align:center;
+}
+
+.rightFooter ul {
+    list-style:none;
+}
+
+.rightFooter ul li a {
+    color: rgb(85,67,49);
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+    .rightFooter ul li a:hover {
+        display: block;
+        list-style: none;
+        text-align: right;
+        color: rgb(85,67,49);
+        font-weight: bold;
+        transition: all .2s ease-in;
+    }
+
+.leftFooter img{
+    margin-bottom:10px;
+    width:140px;
+    height:50px;
+}
+
+/*END OF FOOTER*/
+
